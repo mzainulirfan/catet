@@ -1456,6 +1456,9 @@
 
       window.updateForm = function (key, value) {
         state.form[key] = value;
+        if (key === 'inputBy') {
+          renderModal();
+        }
       };
 
       window.updateAmount = function (inputEl) {
