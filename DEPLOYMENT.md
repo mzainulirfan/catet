@@ -8,8 +8,9 @@
 ## Vercel
 
 - Project: catetin
-- Deployment: https://catetin-2zjk75hjr-mzainulirfans-projects.vercel.app
-- Vercel project page: https://vercel.com/mzainulirfans-projects/catetin/CCZCnoTEzUANMPVSDa5bzAAfPFTL
+- Latest production deployment: https://catetin-nocr5vi4t-mzainulirfans-projects.vercel.app
+- Latest deployment inspect: https://vercel.com/mzainulirfans-projects/catetin/9FC1tU8pjYkzycBghw69pYnci4G4
+- Vercel project page: https://vercel.com/mzainulirfans-projects/catetin
 
 ## Domains
 
@@ -18,4 +19,5 @@
 ## Local Notes
 
 - The `.vercel/` directory is local Vercel metadata and should stay ignored by Git.
+- The `.env*` files are local Vercel/environment files and should stay ignored by Git.
 - If the local `.vercel/project.json` still shows an old project name, re-link with `vercel link` before deploying from this machine.
