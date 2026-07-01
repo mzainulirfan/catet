@@ -1051,6 +1051,553 @@
       font-size: 14.5px;
       font-weight: 800;
     }
+
+    /* Redesigned Categories Page */
+    .category-manage-card {
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+      padding: 16px;
+      margin-bottom: 16px;
+      position: relative;
+      overflow: hidden;
+      background: var(--card);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .category-manage-card:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+      transform: translateY(-1px);
+    }
+    .category-manage-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+      border-bottom: 1px dashed var(--border);
+    }
+    .category-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+    .category-dot-badge {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .category-name-text {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--foreground);
+    }
+    .category-sub-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .subcategory-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 20px;
+      transition: all 0.15s ease;
+      border: 1px solid transparent;
+    }
+    .subcategory-pill span {
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .subcategory-pill-delete {
+      background: transparent;
+      border: none;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: opacity 0.15s ease;
+      font-size: 14px;
+    }
+    .subcategory-pill-delete:hover {
+      opacity: 1;
+    }
+    
+    .category-action-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: var(--muted-bg);
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-size: 16px;
+    }
+    .category-action-btn.btn-edit:hover {
+      background: var(--border);
+      color: var(--foreground);
+    }
+    .category-action-btn.btn-delete:hover {
+      background: var(--destructive-bg);
+      color: var(--destructive);
+    }
+    
+    .add-sub-btn {
+      width: 100%;
+      min-height: 36px;
+      background: transparent;
+      border: 1px dashed var(--border);
+      color: var(--muted);
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .add-sub-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: rgba(99, 102, 241, 0.03);
+    }
+    .add-sub-btn:active {
+      transform: scale(0.98);
+    }
+
+    .add-category-btn-large {
+      width: 100%;
+      min-height: 48px;
+      background: var(--card);
+      border: 2px dashed var(--border);
+      color: var(--foreground);
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+      transition: all 0.2s ease;
+      margin-top: 8px;
+      margin-bottom: 24px;
+    }
+    .add-category-btn-large:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      box-shadow: 0 6px 16px rgba(99, 102, 241, 0.08);
+      transform: translateY(-1px);
+    }
+    .add-category-btn-large:active {
+      transform: scale(0.98);
+    }
+
+    /* Redesigned Reports Page */
+    .report-month-selector {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 14px;
+      border-radius: 14px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+      background: var(--card);
+      border: 1px solid var(--border);
+    }
+    .month-selector-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--foreground);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      font-size: 20px;
+      transition: all 0.2s ease;
+    }
+    .month-selector-btn:hover {
+      background: var(--muted-bg);
+      border-color: var(--muted);
+    }
+    .month-selector-btn:active {
+      transform: scale(0.95);
+    }
+    .month-selector-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--foreground);
+    }
+
+    .report-total-card {
+      border-radius: 16px;
+      padding: 20px;
+      background: var(--card);
+      margin-bottom: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+      border: 1px solid var(--border);
+    }
+    .report-total-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .report-total-amount {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--foreground);
+      line-height: 1.15;
+    }
+    .report-split-section {
+      margin-top: 18px;
+      border-top: 1px dashed var(--border);
+      padding-top: 16px;
+    }
+    .report-split-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+      letter-spacing: 0.02em;
+    }
+    .report-split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .report-split-user {
+      display: flex;
+      flex-direction: column;
+    }
+    .report-split-user.umma-align {
+      align-items: flex-end;
+      text-align: right;
+    }
+    .report-split-label {
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+    }
+    .report-split-value {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--foreground);
+      margin-top: 2px;
+    }
+    .report-split-pct {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+    
+    .report-category-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    /* Styled Accordion/Details */
+    .report-category-item {
+      border: 1px solid var(--border) !important;
+      border-radius: 14px !important;
+      background: var(--card) !important;
+      overflow: hidden;
+      margin-bottom: 12px;
+      padding: 0 !important;
+      transition: all 0.22s ease;
+    }
+    .report-category-item:first-of-type {
+      margin-top: 4px;
+    }
+    .report-category-item:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+      border-color: var(--muted);
+    }
+    .report-category-item[open] {
+      box-shadow: 0 6px 16px rgba(0,0,0,0.03);
+    }
+    
+    .report-category-summary {
+      padding: 14px 16px !important;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .report-category-header-main {
+      flex: 1;
+      min-width: 0;
+    }
+    .report-category-info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    
+    .report-sub-list {
+      background: var(--muted-bg);
+      border-top: 1px solid var(--border);
+      padding: 12px 16px 12px 38px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .report-sub-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      padding: 4px 0;
+      border-bottom: 1px dashed rgba(228, 228, 230, 0.6);
+    }
+    .report-sub-row:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    /* Redesigned Modal Inputs */
+    .sheet-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--foreground);
+    }
+    
+    /* Amount Field redesign */
+    .premium-amount-wrap {
+      display: flex;
+      align-items: center;
+      position: relative;
+      background: var(--muted-bg);
+      border-radius: 14px;
+      border: 2px solid transparent;
+      transition: all 0.2s ease;
+      padding: 2px 14px;
+    }
+    .premium-amount-wrap:focus-within {
+      background: var(--card);
+      border-color: var(--primary);
+      box-shadow: 0 4px 16px rgba(99, 102, 241, 0.08);
+    }
+    .premium-amount-prefix {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--muted);
+      margin-right: 6px;
+    }
+    .premium-amount-input {
+      border: none !important;
+      background: transparent !important;
+      padding: 10px 0 !important;
+      font-size: 24px !important;
+      font-weight: 800 !important;
+      width: 100%;
+      outline: none;
+      color: var(--foreground);
+      box-shadow: none !important;
+    }
+    
+    /* Icon Input Wrapper */
+    .icon-input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .icon-input-wrapper i {
+      position: absolute;
+      left: 14px;
+      font-size: 18px;
+      color: var(--muted);
+      pointer-events: none;
+    }
+    .icon-input-wrapper .control {
+      padding-left: 42px;
+      border-radius: 12px;
+    }
+    
+    /* Segmented User Picker */
+    .premium-segmented {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      background: var(--muted-bg);
+      padding: 6px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+    }
+    .user-btn-segment {
+      min-height: 40px;
+      border-radius: 10px;
+      border: none;
+      font-size: 13.5px;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      background: transparent;
+      color: var(--muted);
+    }
+    .user-btn-segment.active-ayah {
+      background: #3b82f6;
+      color: white;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+    .user-btn-segment.active-umma {
+      background: #ec4899;
+      color: white;
+      box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+    }
+    
+    /* Action Buttons in Modal */
+    .modal-submit-btn {
+      min-height: 48px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 14.5px;
+      box-shadow: 0 6px 20px rgba(99, 102, 241, 0.2);
+    }
+    
+    .modal-delete-btn {
+      min-height: 48px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 14.5px;
+    }
+
+    /* Redesigned Settings / Lainnya Page */
+    .settings-group-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 8px 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+      display: flex;
+      flex-direction: column;
+    }
+    .settings-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(228, 228, 230, 0.5);
+      background: transparent;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      width: 100%;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .settings-item:last-child {
+      border-bottom: none;
+    }
+    .settings-item-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .settings-icon-wrapper {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+    }
+    .settings-label {
+      font-weight: 700;
+      font-size: 13.5px;
+      color: var(--foreground);
+    }
+    .settings-chevron {
+      color: var(--muted);
+      font-size: 18px;
+      transition: transform 0.2s ease;
+    }
+    .settings-item:hover .settings-chevron {
+      transform: translateX(2px);
+    }
+    
+    .info-banner {
+      background: rgba(79, 70, 229, 0.06);
+      border-left: 3px solid var(--primary);
+      padding: 14px;
+      border-radius: 12px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+    .info-banner-icon {
+      font-size: 20px;
+      color: var(--primary);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .info-banner-text {
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: var(--foreground);
+      font-weight: 500;
+    }
+
+    .danger-zone-card {
+      border: 1px solid #fee2e2;
+      background: #fff5f5;
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 4px 12px rgba(239, 68, 68, 0.03);
+    }
+    .danger-zone-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #dc2626;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .danger-zone-desc {
+      font-size: 12px;
+      color: #7f1d1d;
+      margin-bottom: 12px;
+      line-height: 1.4;
+      font-weight: 500;
+    }
   </style>
 </head>
 <body>
@@ -1626,13 +2173,66 @@
         var items = transactionsInMonth(key);
         var total = sum(items);
         var previousTotal = sum(transactionsInMonth(shiftMonth(key, -1)));
+        
         var ayah = sum(items.filter(function (tx) { return tx.inputBy === 'Ayah'; }));
         var umma = sum(items.filter(function (tx) { return tx.inputBy === 'Umma'; }));
+        var shareTotal = ayah + umma;
+        var pctAyah = shareTotal ? Math.round((ayah / shareTotal) * 100) : 0;
+        var pctUmma = shareTotal ? Math.round((umma / shareTotal) * 100) : 0;
+
+        // Month Selector card
+        var monthSelectorHtml = '<div class="report-month-selector card">' +
+          '<button type="button" class="month-selector-btn" onclick="changeReportMonth(-1)">' +
+            '<i class="bx bx-chevron-left"></i>' +
+          '</button>' +
+          '<div class="month-selector-label">' +
+            '<i class="bx bx-calendar-event" style="font-size:18px; color:var(--primary);"></i>' +
+            '<span>' + escapeHtml(monthLabel(key)) + '</span>' +
+          '</div>' +
+          '<button type="button" class="month-selector-btn" onclick="changeReportMonth(1)">' +
+            '<i class="bx bx-chevron-right"></i>' +
+          '</button>' +
+        '</div>';
+
+        // Total Spend Card
+        var deltaHtml = deltaText(total, previousTotal, true);
+        var splitHtml = '';
+        if (shareTotal > 0) {
+          splitHtml = '<div class="report-split-section">' +
+            '<div class="report-split-title">Kontribusi Transaksi</div>' +
+            '<div class="report-split-grid">' +
+              '<div class="report-split-user">' +
+                '<div class="report-split-label"><span class="share-dot bg-ayah"></span>Ayah <span class="report-split-pct">(' + pctAyah + '%)</span></div>' +
+                '<div class="report-split-value">' + money(ayah) + '</div>' +
+              '</div>' +
+              '<div class="report-split-user umma-align">' +
+                '<div class="report-split-label"><span class="share-dot bg-umma"></span>Umma <span class="report-split-pct">(' + pctUmma + '%)</span></div>' +
+                '<div class="report-split-value">' + money(umma) + '</div>' +
+              '</div>' +
+            '</div>' +
+            '<div class="share-progress-track" style="margin-bottom:0;height:6px;">' +
+              '<div class="share-progress-fill bg-ayah-fill" style="width:' + pctAyah + '%"></div>' +
+              '<div class="share-progress-fill bg-umma-fill" style="width:' + pctUmma + '%"></div>' +
+            '</div>' +
+          '</div>';
+        }
+
+        var totalCardHtml = '<article class="report-total-card">' +
+          '<div class="report-total-title">Total Pengeluaran</div>' +
+          '<div class="report-total-amount">' + money(total) + '</div>' +
+          '<div style="margin-top:8px;">' + deltaHtml + '</div>' +
+          splitHtml +
+          '</article>';
+
         return '<section class="page stack">' +
           '<header><h1 class="page-title">Laporan</h1></header>' +
-          '<div class="between" style="margin-bottom:6px;"><button type="button" class="btn btn-secondary btn-icon" onclick="changeReportMonth(-1)">' + svgChevronLeft() + '</button><strong style="font-size:16px;">' + escapeHtml(monthLabel(key)) + '</strong><button type="button" class="btn btn-secondary btn-icon" onclick="changeReportMonth(1)">' + svgChevronRight() + '</button></div>' +
-          '<article class="card"><div class="muted small">Total pengeluaran</div><div class="total-amount" style="font-size:26px">' + money(total) + '</div><div style="margin-top:8px">' + deltaText(total, previousTotal, true) + '</div><div class="small muted" style="margin-top:12px">Ayah: ' + money(ayah) + ' · Umma: ' + money(umma) + '</div></article>' +
-          '<article class="card"><h2 class="card-title">Rincian per kategori</h2>' + renderReportCategories(items, total) + '</article>' +
+          monthSelectorHtml +
+          totalCardHtml +
+          '<article class="card" style="padding:16px 12px;"><h2 class="card-title" style="margin-left:4px;margin-bottom:12px;">Rincian per kategori</h2>' +
+          '<div class="report-category-list">' +
+          renderReportCategories(items, total) +
+          '</div>' +
+          '</article>' +
           '</section>';
       }
 
@@ -1652,34 +2252,143 @@
             var sub = subcategoryById(cat, subId);
             return { name: sub ? sub.name : 'Tidak diketahui', total: subMap[subId] };
           }).sort(function (a, b) { return b.total - a.total; }).map(function (row) {
-            return '<div class="between small" style="padding: 2px 0;"><span class="truncate" style="color:var(--muted);">' + escapeHtml(row.name) + '</span><strong style="color:var(--foreground);">' + money(row.total) + '</strong></div>';
+            return '<div class="report-sub-row">' +
+              '<span style="color:var(--muted); font-weight:500;">' + escapeHtml(row.name) + '</span>' +
+              '<strong style="color:var(--foreground); font-weight:700;">' + money(row.total) + '</strong>' +
+            '</div>';
           }).join('');
-          return '<details><summary><div class="accordion-summary">' + svgChevronDown() + '<div class="truncate"><div class="row truncate"><span class="dot" style="background:' + color + ';box-shadow: 0 0 6px ' + color + ';"></span><strong class="truncate" style="font-weight:700;">' + escapeHtml(name) + '</strong></div><div class="progress-track" style="margin-top:6px;"><div class="progress-fill" style="width:' + pct + '%;background:' + color + ';box-shadow: 0 0 8px ' + color + '80;"></div></div></div><div style="text-align:right"><strong>' + money(item.total) + '</strong><div class="muted small" style="margin-top:2px;">' + pct + '%</div></div></div></summary><div class="sub-list">' + subRows + '</div></details>';
+          
+          return '<details class="report-category-item">' +
+            '<summary class="report-category-summary">' +
+              svgChevronDown() +
+              '<div class="report-category-header-main">' +
+                '<div class="report-category-info-row">' +
+                  '<div class="row truncate" style="gap:8px;">' +
+                    '<span class="dot" style="background:' + color + ';box-shadow: 0 0 6px ' + color + ';"></span>' +
+                    '<strong class="truncate" style="font-weight:700; font-size:14px; color:var(--foreground);">' + escapeHtml(name) + '</strong>' +
+                  '</div>' +
+                  '<div style="text-align:right; flex-shrink:0;">' +
+                    '<strong style="font-size:14px; font-weight:800; color:var(--foreground);">' + money(item.total) + '</strong>' +
+                    '<span class="muted small" style="margin-left:4px; font-weight:600; color:var(--muted);">' + pct + '%</span>' +
+                  '</div>' +
+                '</div>' +
+                '<div class="progress-track" style="margin-top:2px; height:5px; background:var(--muted-bg);">' +
+                  '<div class="progress-fill" style="width:' + pct + '%;background:' + color + ';box-shadow: 0 0 8px ' + color + '60;"></div>' +
+                '</div>' +
+              '</div>' +
+            '</summary>' +
+            '<div class="report-sub-list">' + subRows + '</div>' +
+          '</details>';
         }).join('');
       }
 
       function renderMore() {
         return '<section class="page stack">' +
           '<header><h1 class="page-title">Lainnya</h1></header>' +
-          '<article class="card"><h2 class="card-title">Pengaturan</h2><button type="button" class="menu-item" onclick="goPage(\'categories\')"><span>Kelola Kategori</span>' + iconChevronRight() + '</button></article>' +
-          '<article class="card"><h2 class="card-title">Data</h2><button type="button" class="menu-item" onclick="exportData()"><span>Export Data (.json)</span>' + iconChevronRight() + '</button><button type="button" class="menu-item" onclick="startImport()"><span>Import Data (.json)</span>' + iconChevronRight() + '</button></article>' +
-          '<article class="card"><h2 class="card-title">Tentang</h2><p class="muted" style="margin:0;line-height:1.6;font-size:13px;">Aplikasi ini menyimpan data di browser perangkat ini secara lokal. Lakukan export rutin supaya data Ayah dan Umma bisa digabung dan dicadangkan.</p></article>' +
-          '<article class="card"><h2 class="card-title" style="color:#ef4444;">Danger Zone</h2><button type="button" class="btn btn-destructive full" onclick="clearAllData()">Hapus Semua Data</button></article>' +
+          
+          '<div class="settings-group-card">' +
+            '<button type="button" class="settings-item" onclick="goPage(\'categories\')">' +
+              '<div class="settings-item-left">' +
+                '<div class="settings-icon-wrapper" style="background:#e0e7ff; color:#4f46e5;">' +
+                  '<i class="bx bx-cog"></i>' +
+                '</div>' +
+                '<span class="settings-label">Kelola Kategori</span>' +
+              '</div>' +
+              '<i class="bx bx-chevron-right settings-chevron"></i>' +
+            '</button>' +
+          '</div>' +
+
+          '<div class="settings-group-card">' +
+            '<button type="button" class="settings-item" onclick="exportData()">' +
+              '<div class="settings-item-left">' +
+                '<div class="settings-icon-wrapper" style="background:#dcfce7; color:#15803d;">' +
+                  '<i class="bx bx-export"></i>' +
+                '</div>' +
+                '<span class="settings-label">Export Data (.json)</span>' +
+              '</div>' +
+              '<i class="bx bx-chevron-right settings-chevron"></i>' +
+            '</button>' +
+            '<button type="button" class="settings-item" onclick="startImport()">' +
+              '<div class="settings-item-left">' +
+                '<div class="settings-icon-wrapper" style="background:#e0f2fe; color:#0369a1;">' +
+                  '<i class="bx bx-import"></i>' +
+                '</div>' +
+                '<span class="settings-label">Import Data (.json)</span>' +
+              '</div>' +
+              '<i class="bx bx-chevron-right settings-chevron"></i>' +
+            '</button>' +
+          '</div>' +
+
+          '<div class="info-banner">' +
+            '<i class="bx bx-info-circle info-banner-icon"></i>' +
+            '<div class="info-banner-text">' +
+              'Aplikasi ini menyimpan data di browser perangkat ini secara lokal. Lakukan export rutin supaya data Ayah dan Umma bisa digabung dan dicadangkan.' +
+            '</div>' +
+          '</div>' +
+
+          '<div class="danger-zone-card">' +
+            '<div class="danger-zone-title">' +
+              '<i class="bx bx-error" style="font-size:16px;"></i> Danger Zone' +
+            '</div>' +
+            '<div class="danger-zone-desc">' +
+              'Menghapus semua data transaksi dan pengaturan kategori. Tindakan ini tidak bisa dibatalkan.' +
+            '</div>' +
+            '<button type="button" class="btn btn-destructive full" style="border-radius:10px; font-weight:800;" onclick="clearAllData()">Hapus Semua Data</button>' +
+          '</div>' +
           '</section>';
       }
 
       function renderCategoriesPage() {
         return '<section class="page stack">' +
-          '<header class="between" style="align-items: flex-start;"><button type="button" class="btn btn-secondary btn-icon" onclick="goPage(\'more\')">' + svgChevronLeft() + '</button><div style="flex:1; margin-left:12px;"><h1 class="page-title">Kelola Kategori</h1><div class="page-subtitle">Kategori besar dan sub-kategori</div></div></header>' +
+          '<header class="between" style="align-items: flex-start;">' +
+            '<button type="button" class="btn btn-secondary btn-icon" onclick="goPage(\'more\')">' + svgChevronLeft() + '</button>' +
+            '<div style="flex:1; margin-left:12px;">' +
+              '<h1 class="page-title">Kelola Kategori</h1>' +
+              '<div class="page-subtitle">Kategori besar dan sub-kategori</div>' +
+            '</div>' +
+          '</header>' +
           state.categories.map(function (cat) {
             var color = colorFor(cat);
-            return '<article class="card" style="margin-bottom:12px;"><div class="between" style="border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-bottom: 10px;"><div class="row truncate"><span class="dot" style="background:' + color + ';box-shadow: 0 0 6px ' + color + ';"></span><strong class="truncate" style="font-size:15px;">' + escapeHtml(cat.name) + '</strong></div><div class="cat-actions" style="gap: 6px;"><button type="button" class="btn btn-secondary btn-small btn-icon" style="min-height:34px;width:34px;flex:0 0 34px;" title="Rename Kategori" onclick="renameCategory(\'' + escapeHtml(cat.id) + '\')">' + svgEdit() + '</button><button type="button" class="btn btn-destructive btn-small btn-icon" style="min-height:34px;width:34px;flex:0 0 34px;" title="Hapus Kategori" onclick="deleteCategory(\'' + escapeHtml(cat.id) + '\')">' + svgTrash() + '</button></div></div>' +
-              '<div style="margin-top:10px; display:flex; flex-direction:column; gap:4px;">' + (cat.subcategories || []).map(function (sub) {
-                return '<div class="subcat-row"><span class="truncate" style="font-weight:500; color:var(--muted);">' + escapeHtml(sub.name) + '</span><button type="button" class="btn btn-ghost btn-icon btn-small" style="min-height:30px;width:30px;flex:0 0 30px;color:#f87171;" onclick="deleteSubcategory(\'' + escapeHtml(cat.id) + '\',\'' + escapeHtml(sub.id) + '\')">' + svgClose() + '</button></div>';
-              }).join('') + '</div>' +
-              '<button type="button" class="btn btn-outline full btn-small" style="margin-top: 12px;" onclick="addSubcategory(\'' + escapeHtml(cat.id) + '\')">+ Tambah sub-kategori</button></article>';
+            var subListHtml = '';
+            if (cat.subcategories && cat.subcategories.length) {
+              subListHtml = '<div class="category-sub-container">' +
+                cat.subcategories.map(function (sub) {
+                  return '<div class="subcategory-pill" style="background:' + color + '12; color:' + color + '; border: 1px solid ' + color + '22;">' +
+                    '<span>' + escapeHtml(sub.name) + '</span>' +
+                    '<button type="button" class="subcategory-pill-delete" title="Hapus sub-kategori" onclick="deleteSubcategory(\'' + escapeHtml(cat.id) + '\',\'' + escapeHtml(sub.id) + '\')">' +
+                      '<i class="bx bx-x" style="color:' + color + '"></i>' +
+                    '</button>' +
+                  '</div>';
+                }).join('') +
+              '</div>';
+            } else {
+              subListHtml = '<div class="empty" style="font-size:12px; padding: 8px 0; margin-bottom: 8px;">Belum ada sub-kategori.</div>';
+            }
+
+            return '<article class="category-manage-card" style="border-left: 4px solid ' + color + ';">' +
+              '<div class="category-manage-header">' +
+                '<div class="category-title-wrap">' +
+                  '<span class="category-dot-badge" style="background:' + color + '; box-shadow: 0 0 6px ' + color + ';"></span>' +
+                  '<span class="category-name-text truncate">' + escapeHtml(cat.name) + '</span>' +
+                '</div>' +
+                '<div class="row" style="gap: 6px;">' +
+                  '<button type="button" class="category-action-btn btn-edit" title="Ubah Nama" onclick="renameCategory(\'' + escapeHtml(cat.id) + '\')">' +
+                    '<i class="bx bx-edit-alt"></i>' +
+                  '</button>' +
+                  '<button type="button" class="category-action-btn btn-delete" title="Hapus Kategori" onclick="deleteCategory(\'' + escapeHtml(cat.id) + '\')">' +
+                    '<i class="bx bx-trash"></i>' +
+                  '</button>' +
+                '</div>' +
+              '</div>' +
+              subListHtml +
+              '<button type="button" class="add-sub-btn" onclick="addSubcategory(\'' + escapeHtml(cat.id) + '\')">' +
+                '<i class="bx bx-plus"></i> Tambah Sub-kategori' +
+              '</button>' +
+            '</article>';
           }).join('') +
-          '<button type="button" class="btn btn-secondary full" style="margin-top: 6px;" onclick="addCategory()">+ Tambah Kategori Besar</button>' +
+          '<button type="button" class="add-category-btn-large" onclick="addCategory()">' +
+            '<i class="bx bx-plus-circle" style="font-size: 18px;"></i> Tambah Kategori Besar' +
+          '</button>' +
           '</section>';
       }
 
@@ -1691,16 +2400,34 @@
         }
         var form = state.form;
         var selectedCat = categoryById(form.categoryId);
+        var accentColor = selectedCat ? colorFor(selectedCat) : 'var(--border)';
+
         root.innerHTML = '<div class="modal-overlay" onclick="closeModalFromOverlay(event)"><section class="sheet" role="dialog" aria-modal="true">' +
-          '<div style="width: 36px; height: 4px; background: var(--border); border-radius: 999px; margin: 0 auto 12px;"></div>' +
+          '<div style="width: 36px; height: 4px; background: ' + accentColor + '; border-radius: 999px; margin: 0 auto 12px; transition: background-color 0.3s ease;"></div>' +
           '<div class="sheet-header"><h2 class="sheet-title">' + (state.modal === 'edit' ? 'Edit Transaksi' : 'Tambah Transaksi') + '</h2><button type="button" class="btn btn-ghost btn-icon" style="min-height:36px;width:36px;flex:0 0 36px;" onclick="closeModal()">' + svgClose() + '</button></div>' +
           '<div class="stack">' +
           renderCategoryChips(form) +
           renderSubcategoryChips(form, selectedCat) +
           renderAmountField(form) +
-          '<label class="field"><span class="label">Tanggal</span><input class="control" type="date" value="' + escapeHtml(form.date) + '" onchange="updateForm(\'date\', this.value)"><span class="error">' + escapeHtml(state.errors.date || '') + '</span></label>' +
-          '<label class="field"><span class="label">Tempat/toko <span class="muted">(opsional)</span></span><input class="control" type="text" placeholder="mis. Alfamart, Warung Bu Siti" value="' + escapeHtml(form.place) + '" oninput="updateForm(\'place\', this.value)"></label>' +
-          '<label class="field"><span class="label">Catatan <span class="muted">(opsional)</span></span><input class="control" type="text" placeholder="Catatan tambahan" value="' + escapeHtml(form.note) + '" oninput="updateForm(\'note\', this.value)"></label>' +
+          '<label class="field"><span class="label">Tanggal</span>' +
+            '<div class="icon-input-wrapper">' +
+              '<i class="bx bx-calendar"></i>' +
+              '<input class="control" type="date" value="' + escapeHtml(form.date) + '" onchange="updateForm(\'date\', this.value)">' +
+            '</div>' +
+            '<span class="error">' + escapeHtml(state.errors.date || '') + '</span>' +
+          '</label>' +
+          '<label class="field"><span class="label">Tempat/toko <span class="muted">(opsional)</span></span>' +
+            '<div class="icon-input-wrapper">' +
+              '<i class="bx bx-store"></i>' +
+              '<input class="control" type="text" placeholder="mis. Alfamart, Warung Bu Siti" value="' + escapeHtml(form.place) + '" oninput="updateForm(\'place\', this.value)">' +
+            '</div>' +
+          '</label>' +
+          '<label class="field"><span class="label">Catatan <span class="muted">(opsional)</span></span>' +
+            '<div class="icon-input-wrapper">' +
+              '<i class="bx bx-note"></i>' +
+              '<input class="control" type="text" placeholder="Catatan tambahan" value="' + escapeHtml(form.note) + '" oninput="updateForm(\'note\', this.value)">' +
+            '</div>' +
+          '</label>' +
           renderUserPicker(form) +
           renderModalActions() +
           '</div></section></div>';
@@ -1710,7 +2437,10 @@
         return '<div class="field"><span class="label">Kategori</span><div class="chip-list">' + state.categories.map(function (cat) {
           var active = form.categoryId === cat.id;
           var dotBg = active ? '#ffffff' : colorFor(cat);
-          return '<button type="button" class="chip ' + (active ? 'active' : '') + '" style="' + (active ? 'background:' + colorFor(cat) + ';color:#ffffff;border-color:transparent;' : '') + '" onclick="chooseCategory(\'' + escapeHtml(cat.id) + '\')"><span class="dot" style="background:' + dotBg + '"></span><span>' + escapeHtml(cat.name) + '</span></button>';
+          var activeStyle = active 
+            ? 'background:' + colorFor(cat) + ';color:#ffffff;border-color:transparent;box-shadow: 0 4px 10px ' + colorFor(cat) + '30;' 
+            : '';
+          return '<button type="button" class="chip ' + (active ? 'active' : '') + '" style="' + activeStyle + '" onclick="chooseCategory(\'' + escapeHtml(cat.id) + '\')"><span class="dot" style="background:' + dotBg + '"></span><span>' + escapeHtml(cat.name) + '</span></button>';
         }).join('') + '</div><span class="error">' + escapeHtml(state.errors.categoryId || '') + '</span></div>';
       }
 
@@ -1722,31 +2452,56 @@
           freq[tx.subcategoryId] = (freq[tx.subcategoryId] || 0) + 1;
         });
         subs.sort(function (a, b) { return (freq[b.id] || 0) - (freq[a.id] || 0); });
+        var color = colorFor(cat);
         return '<div class="field"><span class="label">Sub-kategori</span>' +
           (subs.length ? '<div class="chip-list">' + subs.map(function (sub) {
             var active = form.subcategoryId === sub.id;
-            return '<button type="button" class="chip ' + (active ? 'active' : '') + '" style="' + (active ? 'background:var(--primary);color:#ffffff;border-color:transparent;' : '') + '" onclick="chooseSubcategory(\'' + escapeHtml(sub.id) + '\')"><span>' + escapeHtml(sub.name) + '</span></button>';
+            var subStyle = active 
+              ? 'background:' + color + ';color:#ffffff;border-color:transparent;box-shadow: 0 4px 10px ' + color + '30;' 
+              : 'background:' + color + '08;color:var(--foreground);border-color:' + color + '20;';
+            return '<button type="button" class="chip ' + (active ? 'active' : '') + '" style="' + subStyle + '" onclick="chooseSubcategory(\'' + escapeHtml(sub.id) + '\')"><span>' + escapeHtml(sub.name) + '</span></button>';
           }).join('') + '</div>' : '<div class="empty">Belum ada sub-kategori. Tambahkan dulu di Kelola Kategori.</div>') +
           '<span class="error">' + escapeHtml(state.errors.subcategoryId || '') + '</span></div>';
       }
 
       function renderAmountField(form) {
-        return '<label class="field"><span class="label">Jumlah</span><span class="amount-wrap"><span>Rp</span><input class="control" inputmode="numeric" placeholder="0" value="' + escapeHtml(formatAmountInput(form.amountDisplay)) + '" oninput="updateAmount(this)"></span><span class="error">' + escapeHtml(state.errors.amount || '') + '</span></label>';
+        return '<label class="field"><span class="label">Jumlah</span>' +
+          '<div class="premium-amount-wrap">' +
+            '<span class="premium-amount-prefix">Rp</span>' +
+            '<input class="premium-amount-input" inputmode="numeric" placeholder="0" value="' + escapeHtml(formatAmountInput(form.amountDisplay)) + '" oninput="updateAmount(this)">' +
+          '</div>' +
+          '<span class="error">' + escapeHtml(state.errors.amount || '') + '</span>' +
+          '</label>';
       }
 
       function renderUserPicker(form) {
-        return '<div class="field"><span class="label">Diinput oleh</span><div class="segmented">' +
-          ['Ayah', 'Umma'].map(function (name) {
-            var active = form.inputBy === name;
-            return '<button type="button" class="btn ' + (active ? 'btn-primary' : 'btn-outline') + '" onclick="updateForm(\'inputBy\', \'' + name + '\')">' + name + '</button>';
-          }).join('') + '</div></div>';
+        return '<div class="field"><span class="label">Diinput oleh</span>' +
+          '<div class="premium-segmented">' +
+            ['Ayah', 'Umma'].map(function (name) {
+              var active = form.inputBy === name;
+              var activeClass = '';
+              var iconHtml = '';
+              if (active) {
+                activeClass = name === 'Ayah' ? 'active-ayah' : 'active-umma';
+              }
+              if (name === 'Ayah') {
+                iconHtml = '<i class="bx bx-user" style="font-size:16px;"></i>';
+              } else {
+                iconHtml = '<i class="bx bx-user-pin" style="font-size:16px;"></i>';
+              }
+              return '<button type="button" class="user-btn-segment ' + activeClass + '" onclick="updateForm(\'inputBy\', \'' + name + '\')">' + iconHtml + name + '</button>';
+            }).join('') + 
+          '</div></div>';
       }
 
       function renderModalActions() {
         if (state.modal === 'edit') {
-          return '<div class="row"><button type="button" class="btn btn-destructive" onclick="deleteCurrentTransaction()">Hapus</button><button type="button" class="btn btn-primary" style="flex:1" onclick="submitTransaction()">Simpan</button></div>';
+          return '<div class="row" style="gap:12px;">' +
+            '<button type="button" class="btn btn-destructive modal-delete-btn" onclick="deleteCurrentTransaction()">Hapus</button>' +
+            '<button type="button" class="btn btn-primary modal-submit-btn" style="flex:1" onclick="submitTransaction()">Simpan</button>' +
+          '</div>';
         }
-        return '<button type="button" class="btn btn-primary full" onclick="submitTransaction()">Simpan</button>';
+        return '<button type="button" class="btn btn-primary full modal-submit-btn" onclick="submitTransaction()">Simpan</button>';
       }
 
       function newForm(tx) {
